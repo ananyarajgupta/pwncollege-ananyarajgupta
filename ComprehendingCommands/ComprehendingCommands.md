@@ -4,7 +4,8 @@ Using cat command
 ## My solve
 
 **Flag:** `pwn.college{kAuZ0c5cbGEvLImg_Ml1XYcIgB7.QXxcTN0wSM1gjNzEzW}`
-```cat flag
+```bash 
+cat flag
 pwn.college{kAuZ0c5cbGEvLImg_Ml1XYcIgB7.QXxcTN0wSM1gjNzEzW}```
 
 I navigated to the flag file in home directory using ~/flag and got flag
@@ -22,7 +23,8 @@ to read flag from /flag which is an absolute path
 
 ## My solve
 **Flag:** `pwn.college{cwoxK5d53Ndo-iJDW0V3d7KSV9D.QX5ETO0wSM1gjNzEzW}`
-``` cat /flag 
+``` bash 
+cat /flag 
 pwn.college{cwoxK5d53Ndo-iJDW0V3d7KSV9D.QX5ETO0wSM1gjNzEzW}```
 
 
@@ -42,7 +44,8 @@ using absolute path, find the flag
 
 **Flag:** `pwn.college{AX_eGjxQ87p4P3VF7cnUDHtctI_.QXwITO0wSM1gjNzEzW}`
 
-``` cat /bin/X11/flag pwn.college{AX_eGjxQ87p4P3VF7cnUDHtctI_.QXwITO0wSM1gjNzEzW}```
+``` bash 
+cat /bin/X11/flag pwn.college{AX_eGjxQ87p4P3VF7cnUDHtctI_.QXwITO0wSM1gjNzEzW}```
 wrote /bin/X11/flag as the absolute path to get to the directory
 
 ## What I learned
@@ -57,7 +60,8 @@ to use grep to find flag
 ## My solve
 
 **Flag:** `pwn.college{cvofwotRzzd5DlvzkZpXz3ptUEX.QX3EDO0wSM1gjNzEzW}`
-``` grep pwn.college /challenge/data.txt
+``` bash 
+grep pwn.college /challenge/data.txt
 pwn.college{cvofwotRzzd5DlvzkZpXz3ptUEX.QX3EDO0wSM1gjNzEzW}```
 
 searched for pwn.college as flag starts with it and then wrote path to flag
@@ -78,7 +82,8 @@ To find difference in two files and get the real flag which is the difference
 
 **Flag:** `pwn.college{U3geUbpXZjkoFbjPYzT_nsvgbRG.01MwMDOxwSM1gjNzEzW}`
 
-``` diff /challenge/decoys_only.txt /challenge/decoys_and_real.txt
+``` bash 
+diff /challenge/decoys_only.txt /challenge/decoys_and_real.txt
 53a54
 > pwn.college{U3geUbpXZjkoFbjPYzT_nsvgbRG.01MwMDOxwSM1gjNzEzW}```
 
@@ -97,7 +102,8 @@ se ls to see the file name and then find flag
 ## My solve
 
 **Flag:** `pwn.college{cE6h_ry4f44COQfis6IBxlXX5ni.QX4IDO0wSM1gjNzEzW}`
-``` ls /challenge
+``` bash
+ls /challenge
 6309-renamed-run-14222  DESCRIPTION.md
 hacker@commands~listing-files:~$ cat /challenge/6309-renamed-run-14222
 #!/opt/pwn.college/bash
@@ -123,7 +129,8 @@ To create two files in a directory tmp
 ## My solve
 
 **Flag:** `pwn.college{sguE8ftsIkgylYmXBEyVIIREQqx.QXwMDO0wSM1gjNzEzW}`
-``` touch /tmp/pwn
+``` bash
+touch /tmp/pwn
 hacker@commands~touching-files:~$ touch /tmp/college
 hacker@commands~touching-files:~$ /challenge/run
 Success! Here is your flag:
@@ -143,7 +150,8 @@ Video in pwn.college
 to  delete files
 ##My Solve
 **Flag:** `pwn.college{MZWiR-x4WiaQn9IfVTkywR88Sze.QX2kDM1wSM1gjNzEzW}`
-``` ls
+``` bash 
+ls
 delete_me  not-the-flag  p
 hacker@commands~removing-files:~$ rm delete_me
 hacker@commands~removing-files:~$ /challenge/check
@@ -165,7 +173,8 @@ To move flag file to hack the planet
 ## My solve
 
 **Flag:** `pwn.college{shg-RZKv_pkS5IW9i1vy0pPox5u.0VOxEzNxwSM1gjNzEzW}`
-``` mv /flag /tmp/hack-the-planet
+``` bash
+mv /flag /tmp/hack-the-planet
 Correct! Performing 'mv /flag /tmp/hack-the-planet'.
 hacker@commands~moving-files:~$ /challenge/check
 Congrats! You successfully moved the flag to /tmp/hack-the-planet! Here it is:
@@ -175,7 +184,7 @@ pwn.college{shg-RZKv_pkS5IW9i1vy0pPox5u.0VOxEzNxwSM1gjNzEzW}```
 wrote mv /flag /tmp/hack-the-planet and then checked to get flag
 
 ## What I learned
-in the example given, writing  mv my-file your-file was sufficient because both are in the same current directory. However, in the case of question /flag originates from root /tmp/hack-the planet is in tmp directory so specify the source properly
+in the example given, writing  mv my-file your-file was sufficient because both are in the same current directory. However, in the case of question /flag originates from root /tmp/hack-the planet is intemp directory so specify the source properly
 
 ## References 
 Video in pwn.college
@@ -187,7 +196,9 @@ Find flag in dot file
 ## My solve
 
 **Flag:** `pwn.college{0iMNsCpgQvxFFpRk16DcYH4S_Kb.QXwUDO0wSM1gjNzEzW}`
-``` ls /
+
+``` bash 
+ls /
 bin   challenge  etc   lib    lib64   media  nix  proc  run   srv  tmp  var
 boot  dev        home  lib32  libx32  mnt    opt  root  sbin  sys  usr
 hacker@commands~hidden-files:~$ ls -a /
@@ -232,7 +243,8 @@ To make a directory in a directory and add a new file to it
 ## My solve
 
 **Flag:** `pwn.college{o5frfvgf8wuE9DdHtpV6gE_MHXW.QXxMDO0wSM1gjNzEzW}`
-``` mkdir /tmp/pwn
+``` bash 
+mkdir /tmp/pwn
 hacker@commands~making-directories:~$ cd /tmp/pwn
 hacker@commands~making-directories:/tmp/pwn$ touch college
 hacker@commands~making-directories:/tmp/pwn$ /challenge/run
@@ -255,7 +267,8 @@ to find flag from a random directory
 ## My solve
 
 **Flag:** `pwn.college{Mz_UftGizdJD54ombEaBX5qgAFF.QXyMDO0wSM1gjNzEzW}`
-``` cat ./opt/busybox/busybox-1.33.2/include/config/debug/flag
+``` bash 
+cat ./opt/busybox/busybox-1.33.2/include/config/debug/flag
 pwn.college{Mz_UftGizdJD54ombEaBX5qgAFF.QXyMDO0wSM1gjNzEzW}hacker@commands~finding-files:/$```
 
 
@@ -275,7 +288,8 @@ To find /flag through symbolic link
 ## My solve
 
 **Flag:** `pwn.college{Uw6shoel3J-g3YA9MvPMShKGI9K.QX5ETN1wSM1gjNzEzW}`
-``` rm /home/hacker/not-the-flag
+``` bash
+rm /home/hacker/not-the-flag
 hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag
 How I solved: delete /home/hacker/not-the-flag , linked /flag to it and then ran /challenge/catflag
 /challenge/catflag
