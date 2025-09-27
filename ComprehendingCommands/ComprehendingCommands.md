@@ -4,9 +4,10 @@ Using cat command
 ## My solve
 
 **Flag:** `pwn.college{kAuZ0c5cbGEvLImg_Ml1XYcIgB7.QXxcTN0wSM1gjNzEzW}`
-```bash 
+``` bash 
 cat flag
-pwn.college{kAuZ0c5cbGEvLImg_Ml1XYcIgB7.QXxcTN0wSM1gjNzEzW}```
+pwn.college{kAuZ0c5cbGEvLImg_Ml1XYcIgB7.QXxcTN0wSM1gjNzEzW}
+```
 
 I navigated to the flag file in home directory using ~/flag and got flag
 
@@ -25,7 +26,8 @@ to read flag from /flag which is an absolute path
 **Flag:** `pwn.college{cwoxK5d53Ndo-iJDW0V3d7KSV9D.QX5ETO0wSM1gjNzEzW}`
 ``` bash 
 cat /flag 
-pwn.college{cwoxK5d53Ndo-iJDW0V3d7KSV9D.QX5ETO0wSM1gjNzEzW}```
+pwn.college{cwoxK5d53Ndo-iJDW0V3d7KSV9D.QX5ETO0wSM1gjNzEzW}
+```
 
 
 I tried home/hacker/flag which was wrong as /flag does not exist in home directory , it exists in the root directory as /flag
@@ -45,7 +47,8 @@ using absolute path, find the flag
 **Flag:** `pwn.college{AX_eGjxQ87p4P3VF7cnUDHtctI_.QXwITO0wSM1gjNzEzW}`
 
 ``` bash 
-cat /bin/X11/flag pwn.college{AX_eGjxQ87p4P3VF7cnUDHtctI_.QXwITO0wSM1gjNzEzW}```
+cat /bin/X11/flag pwn.college{AX_eGjxQ87p4P3VF7cnUDHtctI_.QXwITO0wSM1gjNzEzW}
+```
 wrote /bin/X11/flag as the absolute path to get to the directory
 
 ## What I learned
@@ -62,7 +65,8 @@ to use grep to find flag
 **Flag:** `pwn.college{cvofwotRzzd5DlvzkZpXz3ptUEX.QX3EDO0wSM1gjNzEzW}`
 ``` bash 
 grep pwn.college /challenge/data.txt
-pwn.college{cvofwotRzzd5DlvzkZpXz3ptUEX.QX3EDO0wSM1gjNzEzW}```
+pwn.college{cvofwotRzzd5DlvzkZpXz3ptUEX.QX3EDO0wSM1gjNzEzW}
+```
 
 searched for pwn.college as flag starts with it and then wrote path to flag
 
@@ -85,7 +89,8 @@ To find difference in two files and get the real flag which is the difference
 ``` bash 
 diff /challenge/decoys_only.txt /challenge/decoys_and_real.txt
 53a54
-> pwn.college{U3geUbpXZjkoFbjPYzT_nsvgbRG.01MwMDOxwSM1gjNzEzW}```
+> pwn.college{U3geUbpXZjkoFbjPYzT_nsvgbRG.01MwMDOxwSM1gjNzEzW}
+```
 
 
 got 25a26 which would mean after 25th line in fake file, there is a 26th line which contains the real flag in 26th line on fake and real file
@@ -112,7 +117,8 @@ echo "Yahaha, you found me! Here is your flag:"
 cat /flag
 hacker@commands~listing-files:~$ /challenge/6309-renamed-run-14222
 Yahaha, you found me! Here is your flag:
-pwn.college{cE6h_ry4f44COQfis6IBxlXX5ni.QX4IDO0wSM1gjNzEzW}```
+pwn.college{cE6h_ry4f44COQfis6IBxlXX5ni.QX4IDO0wSM1gjNzEzW}
+```
 
 
 used ls to find the name of the file – and then came to the file to find flag
@@ -134,7 +140,8 @@ touch /tmp/pwn
 hacker@commands~touching-files:~$ touch /tmp/college
 hacker@commands~touching-files:~$ /challenge/run
 Success! Here is your flag:
-pwn.college{sguE8ftsIkgylYmXBEyVIIREQqx.QXwMDO0wSM1gjNzEzW}```
+pwn.college{sguE8ftsIkgylYmXBEyVIIREQqx.QXwMDO0wSM1gjNzEzW}
+```
 
 
 using touch pwn and touch college, create two file touch and college, ran /challenge/run to get flag
@@ -156,7 +163,8 @@ delete_me  not-the-flag  p
 hacker@commands~removing-files:~$ rm delete_me
 hacker@commands~removing-files:~$ /challenge/check
 Excellent removal. Here is your reward:
-pwn.college{MZWiR-x4WiaQn9IfVTkywR88Sze.QX2kDM1wSM1gjNzEzW}```
+pwn.college{MZWiR-x4WiaQn9IfVTkywR88Sze.QX2kDM1wSM1gjNzEzW}
+```
 used rm command to delete delete_me and then challenge/check to check it
 
 
@@ -178,7 +186,8 @@ mv /flag /tmp/hack-the-planet
 Correct! Performing 'mv /flag /tmp/hack-the-planet'.
 hacker@commands~moving-files:~$ /challenge/check
 Congrats! You successfully moved the flag to /tmp/hack-the-planet! Here it is:
-pwn.college{shg-RZKv_pkS5IW9i1vy0pPox5u.0VOxEzNxwSM1gjNzEzW}```
+pwn.college{shg-RZKv_pkS5IW9i1vy0pPox5u.0VOxEzNxwSM1gjNzEzW}
+```
 
 
 wrote mv /flag /tmp/hack-the-planet and then checked to get flag
@@ -207,7 +216,8 @@ hacker@commands~hidden-files:~$ ls -a /
 hacker@commands~hidden-files:~$ /.flag-683140429131
 bash: /.flag-683140429131: Permission denied
 hacker@commands~hidden-files:~$ cat /.flag-683140429131
-pwn.college{0iMNsCpgQvxFFpRk16DcYH4S_Kb.QXwUDO0wSM1gjNzEzW}```
+pwn.college{0iMNsCpgQvxFFpRk16DcYH4S_Kb.QXwUDO0wSM1gjNzEzW}
+```
 
 
 went into /, checked using ls -a , found flag file, viewed it using cat to find flag
@@ -249,7 +259,8 @@ hacker@commands~making-directories:~$ cd /tmp/pwn
 hacker@commands~making-directories:/tmp/pwn$ touch college
 hacker@commands~making-directories:/tmp/pwn$ /challenge/run
 Success! Here is your flag:
-pwn.college{o5frfvgf8wuE9DdHtpV6gE_MHXW.QXxMDO0wSM1gjNzEzW}```
+pwn.college{o5frfvgf8wuE9DdHtpV6gE_MHXW.QXxMDO0wSM1gjNzEzW}
+```
 
 
 used mkdir to make directory then used touch to create a new file
@@ -269,7 +280,8 @@ to find flag from a random directory
 **Flag:** `pwn.college{Mz_UftGizdJD54ombEaBX5qgAFF.QXyMDO0wSM1gjNzEzW}`
 ``` bash 
 cat ./opt/busybox/busybox-1.33.2/include/config/debug/flag
-pwn.college{Mz_UftGizdJD54ombEaBX5qgAFF.QXyMDO0wSM1gjNzEzW}hacker@commands~finding-files:/$```
+pwn.college{Mz_UftGizdJD54ombEaBX5qgAFF.QXyMDO0wSM1gjNzEzW}hacker@commands~finding-files:/$
+```
 
 
 went to /, typed find -type f -name flag (specifically searched for file called flag of type file)
@@ -294,7 +306,8 @@ hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag
 How I solved: delete /home/hacker/not-the-flag , linked /flag to it and then ran /challenge/catflag
 /challenge/catflag
 About to read out the /home/hacker/not-the-flag file!
-pwn.college{Uw6shoel3J-g3YA9MvPMShKGI9K.QX5ETN1wSM1gjNzEzW}```
+pwn.college{Uw6shoel3J-g3YA9MvPMShKGI9K.QX5ETN1wSM1gjNzEzW}
+```
 
 
 
