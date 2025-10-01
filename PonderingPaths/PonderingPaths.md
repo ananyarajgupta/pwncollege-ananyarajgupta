@@ -10,6 +10,7 @@ hacker@paths~the-root:~$ /pwn
 BOOM!!!
 Here is your flag:
 pwn.college{00XuXsN2-9w3rOz18pDFQIO19R8.QX4cTO0wSM1gjNzEzW}
+
 ```
 
 
